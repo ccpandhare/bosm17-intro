@@ -141,15 +141,50 @@ main content
 	flex-direction: column;
 	justify-content: center;
 	overflow: hidden;
+	position: relative;
 }
 
-#two .main-content{
+#two .shade{
 	height: 80%;
 	width: 110%;
 	
 	transform: rotate(1deg) translateX(-10px);
 	background-color: rgba(0,0,0,.2);
 }
+
+#two .main-content{
+	position: absolute;
+	top:0;
+	left:0;
+	right:0;
+	bottom:0;
+	
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	text-align: center;
+
+}
+
+#two .text{
+	font-size: 125px;
+	line-height: 150px;
+	text-align: center;
+	width: 400px;
+	height: 150px;
+	margin: 0 auto;
+	
+}
+
+#two .main-content span{
+	color: #000;
+	background-color: #fff;
+	width: 130px;
+	padding: 3px;
+	font-size: 30px;
+	margin: 0 auto;
+}
+
 
 /***************************
 ============================
