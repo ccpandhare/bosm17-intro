@@ -176,6 +176,11 @@ footer
 	text-align: center;
 	cursor:pointer;
 }
+ 
+ #two footer .button{
+
+ }
+
 
 #two .button:after {
 	width: 0px;
@@ -234,6 +239,12 @@ footer
 	border-radius: 6px;
 }
 
+#two footer .button:hover span,
+#two footer .icon:hover img{
+	transform: scale(1.2);
+}
+
+
 
 @media only screen and (max-width:900px){
 	/***************************
@@ -282,6 +293,7 @@ footer
 		font-size: 20px;
 		padding: 5px 0;
 		text-align: left;
+		display: block;
 	}
 
 	#two header{
@@ -316,7 +328,9 @@ footer
 	#two input:checked ~ nav{
 		max-height: 800px;
 	}
+}
 
+@media only screen and (max-width: 500px){
 	#two footer{
 		display: flex;
 		flex-direction: row;
@@ -332,5 +346,7 @@ footer
 	}
 
 }
+
+
 
 
