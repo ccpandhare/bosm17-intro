@@ -1,0 +1,263 @@
+body {
+	background-color: #656565;
+	color: #fff;
+	font: 20px/22px arial,verdana;
+	box-sizing: border-box;
+}
+
+.layer {
+	position: absolute;
+	
+	height: 100vh;
+	width: 100vw;
+}
+
+.layer:first-of-type{
+	z-index : -10;
+
+}
+
+.layer:last-of-type{
+	z-index : 10;
+
+}
+
+#three aside {
+	border: 1px solid red;
+	float: right;
+	width: 15vw;
+	height: 100vh;
+}
+
+#two header {
+	height: 23vh;
+
+}
+
+#two footer {
+	height: 20vh;
+}
+
+#two section {
+	height: 57vh;
+}
+
+#two .heading {
+	
+	float: right;
+	width: 30vw;
+	height: 100%;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+
+}
+
+#two p {
+	display: none;
+	font-size: 40px;
+	line-height: 60px;
+	text-align: right;
+	padding-right: 60px;
+}
+
+#two nav {
+	height: 100%;
+	width: 70vw;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+
+}
+
+#two input,
+#two label {
+	display: none;
+}
+
+#two nav li {
+	display: inline-block;
+	height: 100%;
+	font-size: 20px;
+	width: 140px;
+	text-transform: uppercase;
+	margin-left: 40px;
+	
+	cursor: pointer;
+	padding: 10px;
+	text-align: center;
+	border-bottom: 1px solid transparent;
+	transition: all .5s linear ;
+}
+
+#two nav li:hover{
+	border-bottom: 1px solid #aaa;
+	color: #aaa;
+}
+
+#two footer {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-around;
+}
+
+#two footer .button {
+	width: 170px;
+	height: 30px;
+	line-height: 30px;
+	font-size: 18px;
+	background-color: rgba(255,255,255,0.3);
+	margin-left: 60px;
+	position: relative;
+	text-align: center;
+}
+
+#two .button:after {
+	width: 0px;
+	height: 0px;
+	border-right: 5px solid transparent;
+	border-left: 5px solid rgba(255,255,255,0.3);
+	border-top: 15px solid rgba(255,255,255,0.3);
+	border-bottom: 15px solid transparent;
+	position: absolute;
+	content: '';
+	right: -10px;
+}
+
+#two .button:before {
+	width: 0px;
+	height: 0px;
+	border: 15px solid rgba(255,255,255,0.3);
+	border-radius: 50%;
+	position: absolute;
+	content:'';
+	left: -15px;
+}
+
+#two .icon {
+	display: inline-block;
+	width: 29%;
+/*	border: 1px solid #fff;*/
+	height: 40px;
+	border-radius: 6px;
+}
+
+#two .social_media_icons{
+	width: 165px;
+	display: flex;
+	justify-content: space-around;
+	margin-left: 60px;
+
+}
+
+#two .button span{
+	margin-top: 1px;
+	position: absolute;
+	border: 1px solid #fff;
+	background-color: #fff;
+	left: -14px;
+	border-radius: 50%;
+	padding: 1px;
+	width: 24px;
+	height: 24px;
+}
+
+#two .social_media_icons img{
+	width: 100%;
+	height: 100%;
+	border-radius: 6px;
+}
+
+@media only screen and (max-width:900px){
+
+	
+	#two label {
+		display: block;
+		position: relative;
+		top: 10px;
+		left: 20px;
+		width: 40px;
+		padding: 10px;
+		text-align: center;
+		transition: all 1s linear;
+		border-radius: 6px;
+		cursor: pointer;
+	}
+
+	#two label:hover {
+		background: rgba(255,255,255,.3);
+		color: #ddd;
+
+	}
+
+	
+
+
+	#two nav{
+		max-height:0;
+		overflow: hidden;
+		
+		display: block;
+		position: relative;
+
+		z-index: 1;
+		top: 10px;
+		transition: all 1s linear;
+	}	
+
+	#two nav li{
+		font-size: 20px;
+		padding: 5px 0;
+		text-align: left;
+	}
+
+	#two header{
+		/*border:1px solid #fff;*/
+		display: flex;
+		flex-direction: column;
+		justify-content: flex-start;
+		position: relative;
+
+	}
+
+	#two .heading{
+		display: block;
+		position: absolute;
+		right: 10px;
+		top: 10px;
+
+	}
+
+	#two p{
+		font-size: 22px;
+		display: block;
+
+	}
+
+	#two input:checked + label{
+		transform: translateY(2px);
+		background: rgba(255,255,255,.1);
+		color: #ddd;
+	}
+
+	#two input:checked ~ nav{
+		max-height: 800px;
+	}
+
+	#two footer{
+		display: flex;
+		flex-direction: row;
+		flex-wrap: wrap;
+	}
+
+	#two footer .button{
+		margin-left: 0;
+	}
+
+	#two footer .social_media_icons{
+		margin: 0 auto;
+	}
+
+}
+
+
