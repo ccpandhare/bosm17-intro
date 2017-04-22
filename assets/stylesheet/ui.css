@@ -1,7 +1,9 @@
+@import url('https://fonts.googleapis.com/css?family=Oswald:400,700');
+
 body {
-	background-color: #656565;
+	background-color: #009688;
 	color: #fff;
-	font: 20px/22px arial,verdana;
+	font: 20px/22px 'Oswald',sans-serif;
 	box-sizing: border-box;
 }
 
@@ -120,12 +122,12 @@ header
 	padding: 10px;
 	text-align: center;
 	border-bottom: 1px solid transparent;
-	transition: all .3s linear ;
+	transition: border .3s linear ;
 }
 
 #two nav li:hover{
-	border-bottom: 1px solid #aaa;
-	color: #aaa;
+	border-bottom: 1px solid #dfdfdf;
+	color: #dedede;
 }
 
 /***************************
@@ -310,14 +312,14 @@ footer
 		transition: all .3s linear;
 		border-radius: 3px;
 		cursor: pointer;
-		border: 1px solid #aaa;
-		color: #eee;
+		border: 1px solid #eee;
+		color: #fff;
 	}
 
 	#two label:hover {
 		background: rgba(255,255,255,.4);
 		color: #ddd;
-		border: 1px solid #777;
+		border: 1px solid #ddd;
 	}
 
 	
@@ -346,6 +348,10 @@ footer
 		
 		margin-left:10px;
 		transform: translateX(-120px);
+	}
+
+	#two nav li:hover{
+		border-bottom: 0;
 	}
 
 	#two input:checked ~ nav li{
@@ -391,7 +397,7 @@ footer
 		transform: translateY(2px);
 		background: rgba(255,255,255,.1);
 		color: #ddd;
-		border: 1px solid #777;
+		border: 1px solid #ddd;
 	}
 
 	#two input:checked ~ nav{
