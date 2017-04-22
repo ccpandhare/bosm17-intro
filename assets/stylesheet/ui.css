@@ -168,21 +168,41 @@ main content
 
 }
 
+#two .container {
+	
+	display: flex;
+	justify-content: center;
+}
+
+#two .text-container {
+	
+	padding: 30px;
+}
+
+#two .box{
+	border: 1px solid white;
+	width: 250px;
+	height: auto;
+	margin-left: -10em;
+	animation: frame-moved 1s linear ;
+}
+
 #two .text{
-	font-size: 125px;
+	font-size: 5.8em;
 	line-height: 150px;
 	text-align: center;
 	width: 400px;
 	height: 150px;
 	margin: 0 auto;
 	cursor: pointer;
+	animation: appear 0.8s linear;
 }
 
 #two .main-content span{
 	color: #000;
 	background-color: #fff;
 	width: 130px;
-	padding: 3px;
+	
 	font-size: 30px;
 	margin: 0 auto;
 }
@@ -426,11 +446,68 @@ footer
 @media only screen and (max-width: 400px){
 	#two .text{
 		width: 250px;
-		font-size: 70px;
-		
+		font-size: 5.3em;
+		animation: appear-phone 1s linear;
+	}
+
+	#two .box{
+		width: 200px;
+		animation: frame-moved-phone 1s linear;
+		margin-left: -5em;
+
+	}
+	#two .text-container{
+		padding: 10px;
 	}
 }
 
 
+/************************************
+=====================================
 
+animation for main content ( Navjot)
 
+=====================================
+************************************/
+
+@keyframes frame-moved{
+	0%{
+		margin-left: -34em;
+	}
+	100%{
+		margin-left: -10em;
+	}
+}
+
+@keyframes appear{
+	0%{	
+		opacity: 0;
+		font-size: 0em;
+	}
+	100%{
+		opacity: 1;
+		
+		font-size: 5.8em;
+	}
+}
+
+@keyframes appear-phone{
+	0%{	
+		opacity: 0;
+		font-size: 0em;
+	}
+	100%{
+		opacity: 1;
+		
+		font-size: 5.3em;
+	}
+}
+
+@keyframes frame-moved-phone{
+	0%{
+		margin-left: -24em;
+	}
+	100%{
+		margin-left: -5em;
+	}
+}
