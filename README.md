@@ -29,13 +29,23 @@
 - Sound
 
 ## UI - Neethu
-- buttons styling: animations, hover, 
-- Total layout of page: Sections, Links, 
+- buttons styling: animations, hover,
+- Total layout of page: Sections, Links,
 - Social Media Icons Styling
 - Compiling all components into one
 - Loader
 
-
+## Loader - Harsh
+- loader disappear transitions
+- loader animation
 
 ### Resources:
-http://textillate.js.org/
+- Text Animations
+  http://textillate.js.org/
+- Icons (maybe blocked on LAN)
+  https://flaticons.co/
+  https://flaticon.com/
+  https://thenounproject.com/
+- Fonts
+  Google Fonts
+  https://fonts.com/ (Look for a font and back-search it on google to download it :P)
