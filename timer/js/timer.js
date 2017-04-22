@@ -38,7 +38,7 @@ function createTube(dia, height, sides, texture) {
 }
 
 function createBarrel() {
-    var barrel = createTube(600, 100, 14, DRUM_TEXTURE);
+    var barrel = createTube(650, 100, 20, DRUM_TEXTURE);
     return barrel;
 }
 
