@@ -1,4 +1,4 @@
-# bosm17-intro
+# BOSM'17 - Intro Website
 
 ## Development Notes
 - Each contributor should make a separate branch.
@@ -39,13 +39,16 @@
 - loader disappear transitions
 - loader animation
 
-### Resources:
-- Text Animations
-  http://textillate.js.org/
-- Icons (maybe blocked on LAN)
-  https://flaticons.co/
-  https://flaticon.com/
-  https://thenounproject.com/
-- Fonts
-  Google Fonts
-  https://fonts.com/ (Look for a font and back-search it on google to download it :P)
+## Resources:
+### Text Animations
+- [Textillate](http://textillate.js.org/)
+
+### Icons (maybe blocked on LAN)
+- [FlatIcons.co](https://flaticons.co/)
+- [FlatIcons.com](https://flaticon.com/)
+- [The Noun Project](https://thenounproject.com/)
+
+### Fonts
+
+- [Google Fonts](https://fonts.google.com)
+- [Fonts.com](https://fonts.com/) (Look for a font and back-search it on google to download it :P)
