@@ -1,0 +1,81 @@
+*{
+	padding:0px;
+	margin:0px;
+}
+html{
+	font-family: "Bebas Neue", Arial; 
+}
+body{
+	background-color:rgba(255,0,0,0.4);
+}
+.GGG{
+	margin:5px auto;
+}
+.GGG p{
+	font-size: 4.5em;
+	font-family: sans-serif;
+	font-weight: bold;
+	color:white;
+	display: flex;
+	justify-content: center;
+	margin: 0px;
+	animation: appear 0.8s 1;
+	background-color: rgba(0,0,0,0);
+
+}
+.bosm-text {
+	display: flex;
+    flex-direction: column;
+    justify-content: center;
+	z-index: 10;
+	
+	
+}
+@keyframes frame-moved{
+	0%{
+		margin-left: -20em;
+	}
+	100%{
+		margin-left: -3.4em;
+	}
+}
+@keyframes appear{
+	0%{	
+		opacity: 0;
+		font-size: 0em;
+	}
+	100%{
+		opacity: 1;
+		
+		font-size: 4.5em;
+	}
+}
+
+.box{
+	width: 155px;
+	height: 150px;
+	border:2px solid white;
+	margin-left: -3.4em;
+	z-index: 1;
+	animation: frame-moved 1s 1;	
+	
+}
+.text-box-container{
+	display: flex;
+	justify-content: center;
+	margin-top: 37vh;
+	background-color: rgba(0,0,0,0.1);
+	padding: 20px;
+}
+.bosm-17{
+display: flex;
+    justify-content: center;
+}
+.bosm-17 p{padding:5px;
+	text-align: center;
+	font-family: arial;
+	font-weight: bold;
+	font-size: 1.5em;
+	color: black;
+	background-color: white;
+}
