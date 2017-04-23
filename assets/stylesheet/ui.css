@@ -17,7 +17,8 @@ Layers
 .layer {
 	position: absolute;
 	
-	height: 100vh;
+	top: 0;
+	bottom: 0;
 	width: 100vw;
 }
 
@@ -122,13 +123,18 @@ header
 	padding: 10px;
 	text-align: center;
 	border-bottom: 1px solid transparent;
-	transition: border .3s linear ;
+	transition: all .3s linear;
 }
 
 #two nav li:hover{
 	border-bottom: 1px solid #dfdfdf;
 	color: #dedede;
 }
+
+#two nav li:active{
+	transform: translateY(2px);
+}
+
 
 /***************************
 ============================
@@ -195,7 +201,7 @@ main content
 	height: 150px;
 	margin: 0 auto;
 	cursor: pointer;
-	animation: appear 0.8s linear;
+	animation: appear .8s linear;
 }
 
 #two .main-content span{
@@ -301,7 +307,7 @@ footer
 
 #two .social_media_icons img{
 	width: 100%;
-	height: 100%;
+	height: auto;
 	border-radius: 6px;
 }
 
@@ -352,11 +358,15 @@ footer
 		display: block;
 		position: relative;
 
-		z-index: 1;
+		
 		top: 10px;
 		transition: all 1s linear;
 		
 	}	
+
+	#two header{
+		height: auto;
+	}
 	
 
 	#two nav li{
@@ -423,9 +433,17 @@ footer
 	#two input:checked ~ nav{
 		max-height: 800px;
 	}
+
+	#three aside{
+		display: none;
+	}
 }
 
 @media only screen and (max-width: 500px){
+	#two section .box{
+		display: none;
+	}
+
 	#two footer{
 		display: flex;
 		flex-direction: row;
@@ -447,17 +465,34 @@ footer
 	#two .text{
 		width: 250px;
 		font-size: 5.3em;
-		animation: appear-phone 1s linear;
+		animation: appear-phone .8s linear;
 	}
 
-	#two .box{
+	/*#two .box{
 		width: 200px;
 		animation: frame-moved-phone 1s linear;
 		margin-left: -5em;
 
-	}
+	}*/
 	#two .text-container{
 		padding: 10px;
+	}
+}
+
+@media only screen and (max-width:375px){
+	#two footer .button{
+		display: inline-block;
+		margin: 2px 10px;
+		
+	}
+	#two footer .social_media_icons{
+		display: block;
+		clear: both;
+		margin:2px 30px;
+	}
+
+	#two footer{
+		height: auto;
 	}
 }
 
@@ -510,4 +545,21 @@ animation for main content ( Navjot)
 	100%{
 		margin-left: -5em;
 	}
+}
+
+/***********************************
+====================================
+
+youtube video
+
+====================================
+************************************/
+
+.backdrop{
+	display: none;
+	position: fixed;
+	background: rgba(0,0,0,.7);
+	width: 100vw;
+	top: 0;
+	bottom: 0;
 }
