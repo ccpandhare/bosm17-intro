@@ -190,7 +190,11 @@ main content
 	width: 250px;
 	height: auto;
 	margin-left: -10em;
-	animation: frame-moved 1s linear ;
+	
+}
+
+#two .frame-animation{
+	animation: frame-moved 1s linear;
 }
 
 #two .text{
@@ -201,7 +205,11 @@ main content
 	height: 150px;
 	margin: 0 auto;
 	cursor: pointer;
+}
+
+#two .appear-animation{
 	animation: appear .8s linear;
+
 }
 
 #two .main-content span{
@@ -365,19 +373,21 @@ footer
 	}	
 
 	#two header{
-		height: auto;
+		height: fixed;
 	}
 	
 
 	#two nav li{
-		font-size: 18px;
-		padding: 5px 0;
+		font-size: 16px;
+		padding: 2px 0;
 		width: 120px;
 		text-align: left;
 		display: block;
 		
 		margin-left:10px;
+		position: relative;
 		transform: translateX(-120px);
+		/*border: 1px solid black;*/
 	}
 
 	#two nav li:hover{
@@ -390,14 +400,17 @@ footer
 
 	#two nav li:first-of-type{
 		transition: transform .3s ease-in;
+
 	}
 
 	#two nav li:nth-of-type(2){
 		transition: transform .6s ease-in;
+		
 	}
 
 	#two nav li:last-of-type{
 		transition: transform .9s ease-in;
+		
 	}
 
 	#two header{
@@ -431,7 +444,8 @@ footer
 	}
 
 	#two input:checked ~ nav{
-		max-height: 800px;
+		max-height: 100%;
+		
 	}
 
 	#three aside{
@@ -479,21 +493,25 @@ footer
 	}
 }
 
-@media only screen and (max-width:375px){
+@media only screen and (max-width:425px){
 	#two footer .button{
-		display: inline-block;
+		display: block;
 		margin: 2px 10px;
+		
 		
 	}
 	#two footer .social_media_icons{
 		display: block;
 		clear: both;
 		margin:2px 30px;
+		
+		height: auto;
 	}
 
 	#two footer{
-		height: auto;
-	}
+		height: 20vh;
+		/*border: 1px solid black;
+*/	}
 }
 
 
@@ -556,7 +574,7 @@ youtube video
 ************************************/
 
 .backdrop{
-	display: flex;
+	display: none;
 	flex-direction: column;
 	justify-content: center;
 	position: fixed;
