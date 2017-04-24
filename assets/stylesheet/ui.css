@@ -222,6 +222,10 @@ main content
 	animation: tranforming-text 0.6s linear;
 }
 
+#two .texts li{
+	display: none;
+}
+
 
 /***************************
 ============================
