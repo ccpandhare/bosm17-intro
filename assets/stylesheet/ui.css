@@ -212,13 +212,14 @@ main content
 
 }
 
-#two .main-content span{
+#two .main-content .bosm-17{
 	color: #000;
 	background-color: #fff;
 	width: 130px;
 	
 	font-size: 30px;
 	margin: 0 auto;
+	animation: tranforming-text 0.6s linear;
 }
 
 
@@ -478,7 +479,7 @@ footer
 @media only screen and (max-width: 400px){
 	#two .text{
 		width: 250px;
-		font-size: 5.3em;
+		font-size: 4em;
 		animation: appear-phone .8s linear;
 	}
 
@@ -552,7 +553,7 @@ animation for main content ( Navjot)
 	100%{
 		opacity: 1;
 		
-		font-size: 5.3em;
+		font-size: 4em;
 	}
 }
 
@@ -565,6 +566,15 @@ animation for main content ( Navjot)
 	}
 }
 
+
+@keyframes tranforming-text{
+	0%{
+		font-size: 4em;
+	}
+	100%{
+		font-size: 1.5em;
+	}
+}
 /***********************************
 ====================================
 

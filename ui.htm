@@ -5,11 +5,36 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 		<title>BOSM Intro</title>
 		<link rel="stylesheet" href="assets/stylesheet/resets.css">
-		<link rel="stylesheet" href="assets/stylesheet/ui.css">
 
+		<link rel="stylesheet" href="assets/stylesheet/ui.css">
+				<link rel="stylesheet" href="assets/stylesheet/image-trans.css">
+		<script src="http://code.jquery.com/jquery-latest.min.js">	</script>
+	<script type="text/javascript" src="assets/javascript/lettering.js"></script>
+	<script type="text/javascript" src="assets/javascript/textillate.js"></script>
+	<link rel="stylesheet" type="text/css" href="assets/stylesheet/animate.css">
 	</head>
 	<body>
-		<div class="layer" id="one"><!--images--></div>
+		<div class="layer" id="one">
+		<!--images-->
+			
+			<!-- <base href="https://s3-us-west-2.amazonaws.com/s.cdpn.io/4273/"> -->
+			<div id="slider">
+			<figure>
+			<div class="img" style="background-image: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/4273/ibiza.jpg);"></div>
+			<div class="img" style="background-image: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/4273/ankor-wat.jpg);"></div>
+			<div class="img" style="background-image: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/4273/austin-fireworks.jpg);"></div>
+			<div class="img" style="background-image: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/4273/ibiza.jpg);"></div>
+			</figure>
+			</div>
+			<div class="clr">
+			<div>
+			<div class="red" style="background-color: red;opacity: 0.2;height: 100vh;"></div>
+			<div class="blue" style="background-color: blue;opacity: 0.2;height: 100vh;"></div>
+			<div class="green" style="background-color: green;opacity: 0.2;height: 100vh;"></div>
+			<div class="red" style="background-color: red;opacity: 0.2;height: 100vh;"></div>
+			</div>
+			</div>
+		</div>
 
 		
 		<!-- <div class="layer" id="three">
@@ -40,9 +65,10 @@
 					<div class="container">
 						<div class="text-container">
 							<div class="text">
-								GRIT
+								<ul class="texts"><li data-out-effect="fadeOut" data-out-shuffle="true">GRIT</li><li data-in-effect="fadeIn">GUTS</li><li data-in-effect="fadeIn">GLORY</li>
+								</ul>
 							</div>
-							<span>
+							<span class="bosm-17">
 								BOSM'17
 							</span>
 						</div>
@@ -94,9 +120,11 @@
 			</div>
 		</div>
 		<script src="https://www.youtube.com/iframe_api"></script>
-		<script src="assets/javascript/jquery.min.js"></script>
+		
 		
 		<script>
+			//youtube api
+
 			var youtube_video_ids = ['7lkhrw-Mj8g','avXQPMNIj-k'];
 
 			var curr_id = 0;
@@ -131,6 +159,39 @@
 		        player.stopVideo();
 		      	}
 
+
+		      	// text animations
+
+		      			$('#two .texts').textillate({
+							 selector: '#two .texts',
+							  loop: false,
+							  minDisplayTime: 2000,
+							  initialDelay: 0,
+							  autoStart: true,
+							  inEffects: [],
+							  outEffects: [ 'hinge' ],
+							  in: {
+							  	
+							    effect: 'fadeInLeftBig',
+							    delayScale: 1.5,
+							    delay: 50,
+							    sync: false,
+							    shuffle: false,
+								reverse: false,
+							    callback: function () {}
+							  },
+							  out: {
+							    effect: 'hinge',
+							    delayScale: 1.5,
+							    delay: 50,
+							    sync: false,
+							    shuffle: false,
+							    reverse: false,
+							    callback: function () {}
+							  },
+							  callback: function () {},
+							  type: 'char'
+							});
 		</script>
 		<script src="assets/javascript/ui.js"></script>
 	</body>
