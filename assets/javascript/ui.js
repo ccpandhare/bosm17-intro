@@ -1,11 +1,22 @@
 $(document).ready(function(){
+	$(".backdrop").fadeOut(100);
+
+
+
 	$("#two footer .button").click(function(){
 		$(".backdrop").fadeIn();
+
+		curr_id = $(this).attr("list");
+		player.loadVideoById({videoId:youtube_video_ids[curr_id],startSeconds:40,suggestedQuality:'large'});
+
 	});
 
 	$(".backdrop").click(function(){
 
-		$(".backdrop").fadeOut();
+		
+		
+      	stopVideo();
+      	$(".backdrop").fadeOut();
 	});
 
 	function adjust_footer_height(){
@@ -39,6 +50,8 @@ $(document).ready(function(){
 		var k = setTimeout(adjust_footer_height,100);
 		var n = setTimeout(adjust_footer_height,1000);
 	 });
+
+
 
 	
 });

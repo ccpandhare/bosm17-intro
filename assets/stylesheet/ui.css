@@ -556,10 +556,19 @@ youtube video
 ************************************/
 
 .backdrop{
-	display: none;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
 	position: fixed;
 	background: rgba(0,0,0,.7);
 	width: 100vw;
 	top: 0;
 	bottom: 0;
+
+}
+
+
+.youtube-video-container{
+	border: 1px solid #fff;
+	margin: 0 auto;
 }
