@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en-US">
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>BOSM Intro</title>
+		<link rel="stylesheet" href="assets/stylesheet/resets.css">
+		<link rel="stylesheet" href="assets/stylesheet/ui.css">
+
+	</head>
+	<body>
+		<div class="layer" id="one"><!--images--></div>
+
+		
+		<!-- <div class="layer" id="three">
+			
+			<aside></aside>
+		</div> -->
+
+
+		<div class="layer" id="two">
+			<!--main content-->
+			<header>
+				<div class="heading"><p>BOSM'17</p></div><!--
+				--><input type="checkbox" id="toggle1">
+					<label for="toggle1">&#9776;</label>
+				<nav>
+					<ul>
+						<li><a>About Us</a></li>
+						<li><a>Contacts</a></li>
+						<li><a>Sponsors</a></li>
+					</ul>
+				</nav>
+				
+			</header>
+			<section>
+				<div class="shade">
+				</div>
+				<div class="main-content">
+					<div class="container">
+						<div class="text-container">
+							<div class="text">
+								GRIT
+							</div>
+							<span>
+								BOSM'17
+							</span>
+						</div>
+						<div class="box"></div>
+					</div>
+				</div>
+			</section>
+			<footer>
+				<div class="button" list="0">
+					<span>
+						<img src="assets/images/play-icon.png">
+					</span>
+				Simon Taufel
+				</div>
+				<div class="button" list="1">
+					<span>
+						<img src="assets/images/play-icon.png">
+					</span>
+				Teaser
+				</div>
+				<div class="social_media_icons">
+					<div class="icon">
+						<span>
+							<img src="assets/images/facebook-icon.png">
+						</span>
+					</div><!--
+					--><div class="icon">
+						<span>
+							<img src="assets/images/youtube-icon.png">
+						</span>
+					</div><!--
+					--><div class="icon">
+						<span>
+							<img src="assets/images/twitter-icon.png">
+						</span>
+					</div>
+
+				</div>
+			</footer>
+		</div>
+		
+		
+
+	
+		<!-- youtube video -->
+		<div class="backdrop">
+			<div class="youtube-video-container">
+				<div id="player"></div>
+			</div>
+		</div>
+		<script src="https://www.youtube.com/iframe_api"></script>
+		<script src="assets/javascript/jquery.min.js"></script>
+		
+		<script>
+			var youtube_video_ids = ['7lkhrw-Mj8g','avXQPMNIj-k'];
+
+			var curr_id = 0;
+			var youtube_width = '640';
+			var youtube_height = '390';
+
+			if($(window).width()<700){
+				youtube_width = '300';
+				youtube_height = '150'
+			}
+
+
+			  var player;
+		      function onYouTubeIframeAPIReady() {
+		        player = new YT.Player('player', {
+		          height: youtube_height,
+		          width: youtube_width,
+		          videoId: youtube_video_ids[curr_id],
+		          events: {
+		            'onReady': onPlayerReady,
+		            // 'onStateChange': onPlayerStateChange
+		            // 'loadVideoById': loadVideoById,
+		          }
+		        });
+		      }
+
+		       function onPlayerReady(event) {
+			        // event.target.playVideo();
+			   }
+
+			   function stopVideo() {
+		        player.stopVideo();
+		      	}
+
+		</script>
+		<script src="assets/javascript/ui.js"></script>
+	</body>
+</html>
