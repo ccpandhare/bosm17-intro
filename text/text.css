@@ -41,10 +41,10 @@ body{
 }
 @keyframes frame-moved{
 	0%{
-			margin-left: -25em;
+			margin-left: -25rem;
 	}
 	100%{
-		margin-left: -3.4em;
+		margin-left: 6.7rem;
 	}
 }
 @keyframes appear{
@@ -59,11 +59,11 @@ body{
 	}
 }
 
-.box{
-	width: 155px;
-	height: 150px;
+.box{position: absolute;
+	width: 150px;
+	height: 135px;
 	border:2px solid white;
-	margin-left: -3.4em;
+	margin-left: 6.7em;
 	z-index: 1;
 	animation: frame-moved 2s 1;	
 	
