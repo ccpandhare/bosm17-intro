@@ -1,0 +1,145 @@
+body{
+	background-color: #53cf9c;
+	font-family: "Bebas Neue", Arial;
+}
+ul{
+	color: white;
+	list-style-type: none;
+	display: flex;
+	font-size: 120%;
+	font-weight: bold;
+	position: absolute;
+	left: 5%;
+	top:1%;
+	z-index: 2;
+}
+li{
+	white-space: nowrap;
+	cursor: pointer;
+	padding: 2%;	
+}
+.popup-wrapper{
+	height: 100vh;
+	width: 100vw;
+	position: absolute;
+	top: 0;
+	left: 0;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+@keyframes open{
+	0%{
+		transform:scaleX(0) rotateZ(90deg);
+	}
+	100%{
+		transform: scaleX(1) rotateZ(0deg);
+	}
+}
+.animation{
+	animation: open 0.7s linear 0s;
+}
+.popup{
+	z-index: 2;
+	height: 55vh;
+	width: 45vw;
+	min-width: 400px;
+}
+.popup .content{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	transform: skewX(-8deg);
+	height: 100%;
+	width: 100%;
+	z-index: 2;
+	background-color: #fff;
+	opacity: 0.7;
+}
+.popup .ribbon{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 28%;
+	z-index: 2;
+	height: 13%;
+	transform: skewX(-15deg);
+}
+.green .ribbon{
+	background-color: #00fed3;
+}
+.red .ribbon{
+	background-color: #ff0000;
+}
+.purple .ribbon{
+	background-color: #d68fd6;
+}
+.ribbon p{
+	white-space: nowrap;
+	transform: skewX(15deg);
+	font-size: 140%;
+	font-weight: bold;
+	color: white;
+}
+.up-ribbon{
+	position: relative;
+	left: 0;
+	top: 13%;
+}
+.down-ribbon{
+	position: relative;
+	left: 72%;
+	top: -13%;
+}
+.content p{
+	padding: 2%;
+	margin-left: 10%;
+	margin-right: 10%;
+	text-align: justify;
+	transform: skewX(8deg);
+}
+.triangle{
+	width: 0;
+	height: 0;
+	border: 20px solid transparent;
+	border-bottom:20px solid #298976 ;
+}
+.triangle.up{
+	position: relative;
+	top: 50%;
+	transform: rotateZ(45deg);
+	left: 1%;
+	z-index: 1;
+}
+.triangle.down{
+	position: relative;
+	top: 27.5%;
+	right: 3%;
+	transform: rotateZ(-135deg);
+	z-index: 1;
+}
+.cards-list{
+	width: 80%;
+	overflow-x: scroll;		
+	scroll-behavior: 
+	margin-left: 0%;
+	margin-top: 10%;
+	margin-right: 10%;
+	list-style-type: none;
+	height: 65%;
+	transform: skewX(8deg);
+}
+.cards-list li{
+	min-width: 180px;
+	padding: 10px;
+	margin-left: 20px;
+	margin-bottom: 20px;
+	display: inline;
+	background-color: #00fed3;
+}
+.red .cards-list li{
+	background-color: #ff0000;
+}
+.purple .cards-list li{
+	background-color: #d68fd6;
+}
