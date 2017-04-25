@@ -4,7 +4,6 @@
 - Each contributor should make a separate branch.
 - make a folder with the name of your branch in the home of the repository on your branch
 - This is to prevent any merge conflicts in the future.
-- Also, Do not use standard names like index.html, style.css, etc. Make the names more specific, like timer.css, timer.html.
 - We will merge the branches later.
 - Do not push changes to the master branch.
 

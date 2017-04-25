@@ -1,0 +1,59 @@
+html, body {
+  height: 100%;
+}
+body {
+  font: 12px/1.2 Arial;
+  background: #666;
+  background: linear-gradient(#222,#222,#444);
+  color: #fff;
+  text-align:center;
+}
+div#timer {
+  transform-style: preserve-3d;
+  position: absolute;
+  top:0;
+  right:0;
+  height: 100%;
+  width: 300px;
+  perspective: 600px;
+  perspective-origin: center;
+
+}
+.threedee {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform-style: preserve-3d;
+  transform-origin: 50% 50% 50%;
+  backface-visibility: hidden;
+}
+.assembly {
+  transform: rotateZ(90deg) rotateY(0deg);
+  animation: spin 2s cubic-bezier(.65,.29,.65,1.25);
+}
+.assembly .face {
+  /*outline: 1px solid #000;*/
+  background: transparent !important;
+  backface-visibility: visible;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.assembly .face span {
+  transform: rotate(-90deg) scale(0.25);
+  transform-origin: center;
+  width: calc(4 * 7px);
+  height: calc(4 * 70px);
+  background: #FFF;
+}
+.assembly .face label {
+  transform: rotate(-90deg) scale(0.25);
+  transform-origin: center;
+  color: #FFF;
+  font-size: calc(4 * 1.8rem);
+}
+@keyframes spin {
+  to {
+    transform: rotateZ(90deg) rotateY(360deg);
+  }
+}
