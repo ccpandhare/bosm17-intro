@@ -2,8 +2,6 @@ $(document).ready(function(){
 
 
 
-	$('#two .text').addClass('appear-animation');
-	$('#two .box').addClass('frame-animation');
 
 
 

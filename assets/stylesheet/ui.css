@@ -189,11 +189,10 @@ main content
 	border: 1px solid white;
 	width: 250px;
 	height: auto;
-	margin-left: -10em;
-	
-}
+	margin-left: 6.7em;
+	position: absolute;
+	height: 230px;
 
-#two .frame-animation{
 	animation: frame-moved 1s linear;
 }
 
@@ -205,9 +204,7 @@ main content
 	height: 150px;
 	margin: 0 auto;
 	cursor: pointer;
-}
 
-#two .appear-animation{
 	animation: appear .8s linear;
 
 }
@@ -530,10 +527,10 @@ animation for main content ( Navjot)
 
 @keyframes frame-moved{
 	0%{
-		margin-left: -34em;
+		margin-left: -25em;
 	}
 	100%{
-		margin-left: -10em;
+		margin-left: 7em;
 	}
 }
 
