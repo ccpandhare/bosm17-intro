@@ -17,7 +17,8 @@ Layers
 .layer {
 	position: absolute;
 	
-	height: 100vh;
+	top: 0;
+	bottom: 0;
 	width: 100vw;
 }
 
@@ -122,13 +123,18 @@ header
 	padding: 10px;
 	text-align: center;
 	border-bottom: 1px solid transparent;
-	transition: border .3s linear ;
+	transition: all .3s linear;
 }
 
 #two nav li:hover{
 	border-bottom: 1px solid #dfdfdf;
 	color: #dedede;
 }
+
+#two nav li:active{
+	transform: translateY(2px);
+}
+
 
 /***************************
 ============================
@@ -183,8 +189,11 @@ main content
 	border: 1px solid white;
 	width: 250px;
 	height: auto;
-	margin-left: -10em;
-	animation: frame-moved 1s linear ;
+	margin-left: 6.7em;
+	position: absolute;
+	height: 230px;
+
+	animation: frame-moved 1s linear;
 }
 
 #two .text{
@@ -195,16 +204,23 @@ main content
 	height: 150px;
 	margin: 0 auto;
 	cursor: pointer;
-	animation: appear 0.8s linear;
+
+	animation: appear .8s linear;
+
 }
 
-#two .main-content span{
+#two .main-content .bosm-17{
 	color: #000;
 	background-color: #fff;
 	width: 130px;
 	
 	font-size: 30px;
 	margin: 0 auto;
+	animation: tranforming-text 0.6s linear;
+}
+
+#two .texts li{
+	display: none;
 }
 
 
@@ -301,7 +317,7 @@ footer
 
 #two .social_media_icons img{
 	width: 100%;
-	height: 100%;
+	height: auto;
 	border-radius: 6px;
 }
 
@@ -352,22 +368,28 @@ footer
 		display: block;
 		position: relative;
 
-		z-index: 1;
+		
 		top: 10px;
 		transition: all 1s linear;
 		
 	}	
+
+	#two header{
+		height: fixed;
+	}
 	
 
 	#two nav li{
-		font-size: 18px;
-		padding: 5px 0;
+		font-size: 16px;
+		padding: 2px 0;
 		width: 120px;
 		text-align: left;
 		display: block;
 		
 		margin-left:10px;
+		position: relative;
 		transform: translateX(-120px);
+		/*border: 1px solid black;*/
 	}
 
 	#two nav li:hover{
@@ -380,14 +402,17 @@ footer
 
 	#two nav li:first-of-type{
 		transition: transform .3s ease-in;
+
 	}
 
 	#two nav li:nth-of-type(2){
 		transition: transform .6s ease-in;
+		
 	}
 
 	#two nav li:last-of-type{
 		transition: transform .9s ease-in;
+		
 	}
 
 	#two header{
@@ -421,11 +446,20 @@ footer
 	}
 
 	#two input:checked ~ nav{
-		max-height: 800px;
+		max-height: 100%;
+		
+	}
+
+	#three aside{
+		display: none;
 	}
 }
 
 @media only screen and (max-width: 500px){
+	#two section .box{
+		display: none;
+	}
+
 	#two footer{
 		display: flex;
 		flex-direction: row;
@@ -446,19 +480,40 @@ footer
 @media only screen and (max-width: 400px){
 	#two .text{
 		width: 250px;
-		font-size: 5.3em;
-		animation: appear-phone 1s linear;
+		font-size: 4em;
+		animation: appear-phone .8s linear;
 	}
 
-	#two .box{
+	/*#two .box{
 		width: 200px;
 		animation: frame-moved-phone 1s linear;
 		margin-left: -5em;
 
-	}
+	}*/
 	#two .text-container{
 		padding: 10px;
 	}
+}
+
+@media only screen and (max-width:425px){
+	#two footer .button{
+		display: block;
+		margin: 2px 10px;
+		
+		
+	}
+	#two footer .social_media_icons{
+		display: block;
+		clear: both;
+		margin:2px 30px;
+		
+		height: auto;
+	}
+
+	#two footer{
+		height: 20vh;
+		/*border: 1px solid black;
+*/	}
 }
 
 
@@ -472,10 +527,10 @@ animation for main content ( Navjot)
 
 @keyframes frame-moved{
 	0%{
-		margin-left: -34em;
+		margin-left: -25em;
 	}
 	100%{
-		margin-left: -10em;
+		margin-left: 7em;
 	}
 }
 
@@ -499,7 +554,7 @@ animation for main content ( Navjot)
 	100%{
 		opacity: 1;
 		
-		font-size: 5.3em;
+		font-size: 4em;
 	}
 }
 
@@ -510,4 +565,39 @@ animation for main content ( Navjot)
 	100%{
 		margin-left: -5em;
 	}
+}
+
+
+@keyframes tranforming-text{
+	0%{
+		font-size: 4em;
+	}
+	100%{
+		font-size: 1.5em;
+	}
+}
+/***********************************
+====================================
+
+youtube video
+
+====================================
+************************************/
+
+.backdrop{
+	display: none;
+	flex-direction: column;
+	justify-content: center;
+	position: fixed;
+	background: rgba(0,0,0,.7);
+	width: 100vw;
+	top: 0;
+	bottom: 0;
+
+}
+
+
+.youtube-video-container{
+	border: 1px solid #fff;
+	margin: 0 auto;
 }
