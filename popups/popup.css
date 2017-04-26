@@ -59,12 +59,15 @@ li{
 }
 .popup{
 	z-index: 2;
-	height: 55vh;
-	width: 45vw;
+	height: 70vh;
+	width: 70vw;
 	min-width: 400px;
+	position: relative;
 }
 .popup .content{
 	display: flex;
+	position: absolute;
+	top:0;
 	justify-content: center;
 	align-items: center;
 	transform: skewX(-8deg);
@@ -72,7 +75,7 @@ li{
 	width: 100%;
 	z-index: 2;
 	background-color: #fff;
-	opacity: 0.7;
+	opacity: 0.82;
 }
 .popup .ribbon{
 	display: flex;
@@ -82,33 +85,35 @@ li{
 	min-width: 152px;
 	z-index: 2;
 	height: 13%;
-	transform: skewX(-15deg);
+	transform: skewX(-30deg);
 }
 .green .ribbon{
-	background-color: #00fed3;
+	background-color: #00FED3;
 }
 .red .ribbon{
-	background-color: #ff0000;
+	background-color: #EF3340;
 }
 .purple .ribbon{
-	background-color: #d68fd6;
+	background-color: #D68FD6;
 }
 .ribbon p{
 	white-space: nowrap;
-	transform: skewX(15deg);
+	transform: skewX(30deg);
 	font-size: 140%;
 	font-weight: bold;
 	color: white;
 }
 .up-ribbon{
-	position: relative;
-	left: 0;
-	top: 13%;
+	position: absolute;
+	left: calc(0.14 * 35vh - 0.57 * 0.13 * 35vh);
+	top: -1px;
+	z-index: 3 !important;
 }
 .down-ribbon{
-	position: relative;
-	left: 72%;
-	top: -13%;
+	position: absolute;
+	right: 0;
+	bottom: -1px;
+	z-index: 3 !important;
 }
 .content p{
 	padding: 2%;
