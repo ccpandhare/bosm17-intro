@@ -80,9 +80,13 @@ var nt1 = nt1.replace(/X\([^\)]*rad\)/,"X(-0.02rad)");
 var ct19 = faces[19].style.transform;
 var nt19 = ct19.replace(/Y\([^\)]*rad\)/,"Y(-0.93rad)");
 var nt19 = nt19.replace(/X\([^\)]*rad\)/,"X(-0.02rad)");
-nt1 += " scale(2.5)";
-nt19 += " scale(2.5)";
+nt1 += " scale(3.5)";
+nt19 += " scale(3.5)";
 faces[1].style.transform = nt1;
+// faces[1].querySelector('span').style.transform = "rotateZ(-90deg) rotateX(-45deg) scaleY(0.75)";
+faces[1].style.transformOrigin = "left";
+// faces[19].querySelector('span').style.transform = "rotateZ(-90deg) rotateX(45deg) scaleY(0.75)";
+faces[19].style.transformOrigin = "right";
 faces[19].style.transform = nt19;
 }
 
