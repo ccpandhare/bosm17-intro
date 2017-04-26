@@ -46,11 +46,11 @@ function createBarrel() {
     return barrel;
 }
 
-document.querySelector('div#timer').appendChild(createBarrel());
+function initTimer() {
 document.querySelector('.assembly').style.width = 1.25*parseInt(document.querySelector('.assembly .face').style.width)+"px";
 var times = ["3 Months","1 Month","20 Days","10 Days","5 Days","4 Days","3 Days","2 Days","1 Day","0 Days"];
 var labels = document.querySelectorAll("#timer label");
-var today = new Date("08/25/2017");
+var today = new Date();
 var bosm = new Date("08/27/2017");
 var timeDiff = Math.abs(bosm.getTime() - today.getTime());
 var diffDays = Math.ceil(timeDiff / (1000 * 3600 * 24));
@@ -73,8 +73,25 @@ for (i = 0; j < labels.length; j++, i++) {
   labels[j].innerHTML = times[i];
 }
 
+var faces = document.querySelectorAll('.face');
+var ct1 = faces[1].style.transform;
+var nt1 = ct1.replace(/Y\([^\)]*rad\)/,"Y(0.93rad)");
+var nt1 = nt1.replace(/X\([^\)]*rad\)/,"X(-0.02rad)");
+var ct19 = faces[19].style.transform;
+var nt19 = ct19.replace(/Y\([^\)]*rad\)/,"Y(-0.93rad)");
+var nt19 = nt19.replace(/X\([^\)]*rad\)/,"X(-0.02rad)");
+nt1 += " scale(2.5)";
+nt19 += " scale(2.5)";
+faces[1].style.transform = nt1;
+faces[19].style.transform = nt19;
+}
+
+
+document.querySelector('div#timer').appendChild(createBarrel());
+initTimer();
+
 window.onresize = function() {
     document.querySelector('.assembly').remove();
     document.querySelector('div#timer').appendChild(createBarrel());
-    document.querySelector('.assembly').style.width = 2.25*parseInt(document.querySelector('.assembly .face').style.width)+"px";
+    initTimer();
 }
