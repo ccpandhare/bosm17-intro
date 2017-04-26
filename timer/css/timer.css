@@ -1,21 +1,17 @@
-html, body {
-  height: 100%;
-}
-body {
-  font: 12px/1.2 Arial;
-  background: #666;
-  background: linear-gradient(#222,#222,#444);
-  color: #fff;
-  text-align:center;
-}
 div#timer-wrapper {
-  height: 100%;
+  position: absolute;
+  top:0;
+  right:0;
+  height: 100vh;
   width: 20%;
   display: flex;
   justify-content: center;
-  position: absolute;
-  right: 0;
-  top:0;
+  padding-right: 20px;
+  perspective: 600px;
+  perspective-origin: center;
+}
+div#timer-wrapper * {
+  backface-visibility: hidden;
 }
 div#timer {
   transform-style: preserve-3d;
@@ -24,13 +20,10 @@ div#timer {
   right:0;
   width:100px;
   height: 100%;
-  perspective: 600px;
-  perspective-origin: center;
-
 }
 .threedee {
   position: absolute;
-  left: 50%;
+  left: 0;
   top: 50%;
   transform-style: preserve-3d;
   transform-origin: 50% 50% 50%;
@@ -38,7 +31,7 @@ div#timer {
 }
 .assembly {
   position: absolute;
-  left: 0%;
+  left: 50%;
   top: 50%;
   transform: rotateZ(90deg) rotateY(0deg);
 }
@@ -54,6 +47,7 @@ div#timer {
   justify-content: center;
 }
 .assembly .face span {
+  display: block !important;
   transform: rotate(-90deg) scale(0.25);
   transform-origin: center;
   width: calc(4 * 2px);
@@ -61,10 +55,11 @@ div#timer {
   background: #FFF;
 }
 .assembly .face label {
+  display: block !important;
   transform: rotate(-90deg) scale(0.25);
   transform-origin: center;
   color: #FFF;
-  font-size: calc(3.5 * 1.8rem);
+  font-size: calc(3 * 1.8rem);
   white-space: nowrap;
   text-transform: uppercase;
   font-family: "Bebas Neue";
