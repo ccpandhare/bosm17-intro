@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>BOSM Intro</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" type="text/css" href="popup.css">
+	<script src="https://code.jquery.com/jquery-3.2.1.min.js"
+  		integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+  		crossorigin="anonymous"></script>
+</head>
+<body>
+<ul>
+	<li><a class="about-link">About Us</a></li>
+	<li><a class="contact-link">Contacts</a></li>
+	<li><a class="sponsors-link">Sponsors</a></li>
+</ul>
+<div class="popup-wrapper">
+<div class="popup green about">
+	<div class="up-ribbon ribbon"><p>ABOUT US</p></div>
+
+	<div class="content">
+		<p>
+			Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+		</p>
+	</div>
+<div class="down-ribbon ribbon"></div>
+</div>
+<div class="popup red contact">
+	<div class="up-ribbon ribbon"><p>CONTACT US</p></div>
+	<div class="content">
+		<ul class="cards-list">
+				<li></li>
+				<li></li>
+				<li></li>
+				<li></li>
+				<li></li>
+				<li></li>
+				<li></li>
+				<li></li>
+				<li></li>
+				<li></li>
+				<li></li>
+		</ul></div>
+<div class="down-ribbon ribbon"></div>
+</div>
+<div class="popup green sponsors">
+	<div class="up-ribbon ribbon"><p>SPONSORS</p></div>
+	<div class="content">
+		<p>
+			Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+		</p>
+	</div>
+<div class="down-ribbon ribbon"></div>
+</div>
+</div>
+<script type="text/javascript">
+	$(document).ready(function(){
+			$('.popup').hide();
+			$('.about-link').click(function(){
+				$('.popup').hide();
+				$('.about').show();
+				$('.animation').removeClass('animation');
+				$('.about').addClass('animation');
+			});
+			$('.contact-link').click(function(){
+				$('.popup').hide();
+				$('.contact').show();
+				$('.animation').removeClass('animation');
+				$('.contact').addClass('animation');
+			});
+			$('.sponsors-link').click(function(){
+				$('.popup').hide();
+				$('.sponsors').show();
+				$('.animation').removeClass('animation');
+				$('.sponsors').addClass('animation');
+			});
+		});
+</script>
+</body>
+</html>

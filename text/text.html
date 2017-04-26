@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<link rel="stylesheet" type="text/css" href="text.css">
+	<script src="http://code.jquery.com/jquery-latest.min.js">	</script>
+	<script type="text/javascript" src="lettering.js"></script>
+	<script type="text/javascript" src="textillate.js"></script>
+	<link rel="stylesheet" type="text/css" href="animate.css">
+</head>
+<body>	
+<div class="image-background">
+	<div class="red-background in ">
+		<div class="text-box-container">
+		
+			<div class="bosm-text">
+				<div class="GGG">
+				<ul class="texts">
+		<li data-out-effect="fadeOut" data-out-shuffle="true">GRIT</li>
+		<li data-in-effect="fadeIn">GUTS</li>
+		<li data-in-effect="fadeIn">GLORY</li>
+	</ul>
+				</div>
+				<div class="bosm-17"><p>BOSM'17</p></div>
+			</div>
+			<div class="box">
+			</div>
+		</div>
+	</div>
+</div>
+<script type="text/javascript">
+		$('.texts').textillate({
+ selector: '.texts',
+  loop: false,
+  minDisplayTime: 2000,
+  initialDelay: 0,
+  autoStart: true,
+  inEffects: [],
+  outEffects: [ 'hinge' ],
+  in: {
+  	
+    effect: 'fadeInLeftBig',
+    delayScale: 1.5,
+    delay: 50,
+    sync: false,
+    shuffle: false,
+	reverse: false,
+    callback: function () {}
+  },
+  out: {
+    effect: 'hinge',
+    delayScale: 1.5,
+    delay: 50,
+    sync: false,
+    shuffle: false,
+    reverse: false,
+    callback: function () {}
+  },
+  callback: function () {},
+  type: 'char'
+});
+</script>
+</body>
+</html>

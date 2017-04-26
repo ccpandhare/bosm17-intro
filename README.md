@@ -1,4 +1,4 @@
-# bosm17-intro
+# BOSM'17 - Intro Website
 
 ## Development Notes
 - Each contributor should make a separate branch.
@@ -28,13 +28,26 @@
 - Sound
 
 ## UI - Neethu
-- buttons styling: animations, hover, 
-- Total layout of page: Sections, Links, 
+- buttons styling: animations, hover,
+- Total layout of page: Sections, Links,
 - Social Media Icons Styling
 - Compiling all components into one
 - Loader
 
+## Loader - Harsh
+- loader disappear transitions
+- loader animation
 
+## Resources:
+### Text Animations
+- [Textillate](http://textillate.js.org/)
 
-### Resources:
-http://textillate.js.org/
+### Icons (maybe blocked on LAN)
+- [FlatIcons.co](https://flaticons.co/)
+- [FlatIcons.com](https://flaticon.com/)
+- [The Noun Project](https://thenounproject.com/)
+
+### Fonts
+
+- [Google Fonts](https://fonts.google.com)
+- [Fonts.com](https://fonts.com/) (Look for a font and back-search it on google to download it :P)
