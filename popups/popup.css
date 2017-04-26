@@ -1,6 +1,12 @@
+html, body {
+	height: 100%;
+	width: 100%;
+}
 body{
-	background-color: #53cf9c;
+	background: url(../resources/01.jpg) no-repeat center;
+	background-size: cover;
 	font-family: "Bebas Neue", Arial;
+	overflow: hidden;
 }
 ul{
 	color: white;
@@ -16,7 +22,7 @@ ul{
 li{
 	white-space: nowrap;
 	cursor: pointer;
-	padding: 2%;	
+	padding: 2%;
 }
 .popup-wrapper{
 	height: 100vh;
@@ -47,7 +53,7 @@ li{
 	100%{
 		transform: rotateY(0deg);
 	}
-} 		
+}
 .animation{
 	animation: open2 0.7s linear 0s;
 }
@@ -133,7 +139,7 @@ li{
 }
 .cards-list{
 	width: 80%;
-	overflow-x: scroll;	
+	overflow-x: scroll;
 	-webkit-scroll-snap-type: mandatory;
     -webkit-scroll-snap-points-x: repeat(100%);
 	margin-left: 0%;
@@ -177,12 +183,12 @@ li{
 	}
 }
 @media screen and (max-width : 1036px) {
-	
+
 }
 @media screen and (max-width : 979px) {
 	body,html{
-		font-size:15px; 
-	}	
+		font-size:15px;
+	}
 	.cards-list{
 		width: 70%;
 		height: 55%;
