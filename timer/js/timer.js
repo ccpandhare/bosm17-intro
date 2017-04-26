@@ -38,8 +38,64 @@ function createTube(dia, height, sides, texture) {
 }
 
 function createBarrel() {
-    var barrel = createTube(650, 100, 20, DRUM_TEXTURE);
+    var minht = 350;
+    var ht = 0.8 * Math.max(document.documentElement.clientHeight, window.innerHeight || 0);
+    if (ht < minht) ht = minht;
+    var barrel = createTube(ht, 100, 20, DRUM_TEXTURE);
+    document.barrel = barrel;
     return barrel;
 }
 
+function initTimer() {
+document.querySelector('.assembly').style.width = 1.25*parseInt(document.querySelector('.assembly .face').style.width)+"px";
+var times = ["3 Months","1 Month","20 Days","10 Days","5 Days","4 Days","3 Days","2 Days","1 Day","0 Days"];
+var labels = document.querySelectorAll("#timer label");
+var today = new Date();
+var bosm = new Date("08/27/2017");
+var timeDiff = Math.abs(bosm.getTime() - today.getTime());
+var diffDays = Math.ceil(timeDiff / (1000 * 3600 * 24));
+if (diffDays >= 90) {var initial = 0;}
+else if (diffDays >= 30) {var initial = 1;}
+else if (diffDays >= 20) {var initial = 2;}
+else if (diffDays >= 10) {var initial = 3;}
+else if (diffDays >= 5) {var initial = 4;}
+else if (diffDays == 4) {var initial = 5;}
+else if (diffDays == 3) {var initial = 6;}
+else if (diffDays == 2) {var initial = 7;}
+else if (diffDays == 1) {var initial = 8;}
+else {var initial = 9;}
+var j = 0;
+for (var i = initial; i < labels.length; i++) {
+  labels[i-initial].innerHTML = times[i];
+  j+=1;
+}
+for (i = 0; j < labels.length; j++, i++) {
+  labels[j].innerHTML = times[i];
+}
+
+var faces = document.querySelectorAll('.face');
+var ct1 = faces[1].style.transform;
+var nt1 = ct1.replace(/Y\([^\)]*rad\)/,"Y(0.93rad)");
+var nt1 = nt1.replace(/X\([^\)]*rad\)/,"X(-0.02rad)");
+var ct19 = faces[19].style.transform;
+var nt19 = ct19.replace(/Y\([^\)]*rad\)/,"Y(-0.93rad)");
+var nt19 = nt19.replace(/X\([^\)]*rad\)/,"X(-0.02rad)");
+nt1 += " scale(3.5)";
+nt19 += " scale(3.5)";
+faces[1].style.transform = nt1;
+// faces[1].querySelector('span').style.transform = "rotateZ(-90deg) rotateX(-45deg) scaleY(0.75)";
+faces[1].style.transformOrigin = "left";
+// faces[19].querySelector('span').style.transform = "rotateZ(-90deg) rotateX(45deg) scaleY(0.75)";
+faces[19].style.transformOrigin = "right";
+faces[19].style.transform = nt19;
+}
+
+
 document.querySelector('div#timer').appendChild(createBarrel());
+initTimer();
+
+window.onresize = function() {
+    document.querySelector('.assembly').remove();
+    document.querySelector('div#timer').appendChild(createBarrel());
+    initTimer();
+}

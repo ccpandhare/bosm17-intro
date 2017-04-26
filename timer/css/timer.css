@@ -8,13 +8,22 @@ body {
   color: #fff;
   text-align:center;
 }
+div#timer-wrapper {
+  height: 100%;
+  width: 20%;
+  display: flex;
+  justify-content: center;
+  position: absolute;
+  right: 0;
+  top:0;
+}
 div#timer {
   transform-style: preserve-3d;
-  position: absolute;
+  position: relative;
   top:0;
   right:0;
+  width:100px;
   height: 100%;
-  width: 300px;
   perspective: 600px;
   perspective-origin: center;
 
@@ -28,7 +37,12 @@ div#timer {
   backface-visibility: hidden;
 }
 .assembly {
+  position: absolute;
+  left: 0%;
+  top: 50%;
   transform: rotateZ(90deg) rotateY(0deg);
+}
+.assembly {
   animation: spin 2s cubic-bezier(.65,.29,.65,1.25);
 }
 .assembly .face {
@@ -42,15 +56,18 @@ div#timer {
 .assembly .face span {
   transform: rotate(-90deg) scale(0.25);
   transform-origin: center;
-  width: calc(4 * 7px);
-  height: calc(4 * 70px);
+  width: calc(4 * 2px);
+  height: calc(4 * 90px);
   background: #FFF;
 }
 .assembly .face label {
   transform: rotate(-90deg) scale(0.25);
   transform-origin: center;
   color: #FFF;
-  font-size: calc(4 * 1.8rem);
+  font-size: calc(3.5 * 1.8rem);
+  white-space: nowrap;
+  text-transform: uppercase;
+  font-family: "Bebas Neue";
 }
 @keyframes spin {
   to {
