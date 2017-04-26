@@ -41,7 +41,7 @@ function createBarrel() {
     var minht = 350;
     var ht = 0.8 * Math.max(document.documentElement.clientHeight, window.innerHeight || 0);
     if (ht < minht) ht = minht;
-    var barrel = createTube(ht, 100, 30, DRUM_TEXTURE);
+    var barrel = createTube(0.9*ht, 100, 30, DRUM_TEXTURE);
     document.barrel = barrel;
     return barrel;
 }
@@ -92,6 +92,7 @@ function threedeestripes() {
   nt1 += " scale(1.5)";
   nt19 += " scale(1.5)";
   faces[1].style.transform = nt1;
+  faces[0].querySelector('label').style.fontSize = "calc(3 * 1.8rem)";
   faces[1].querySelector('span').style.transform = "rotateZ(-90deg) rotateX(0deg) scaleX(0.5) scaleY(0.25)";
   faces[3].querySelector('span').style.transform = "rotateZ(-90deg) rotateX(0deg) scaleX(0.5) scaleY(0.15)";
   faces[29].querySelector('span').style.transform = "rotateZ(-90deg) rotateX(0deg) scaleX(0.5) scaleY(0.25)";
@@ -99,9 +100,10 @@ function threedeestripes() {
   faces[29].style.transform = nt19;
 }
 
-
-document.querySelector('div#timer').appendChild(createBarrel());
-initTimer();
+window.onload = function() {
+  document.querySelector('div#timer').appendChild(createBarrel());
+  initTimer();
+}
 
 window.onresize = function() {
     //document.querySelector('.assembly').remove();

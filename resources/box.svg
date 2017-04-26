@@ -1,1 +1,20 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="1012.9 391.6 390.1 364.8"><defs><style>.a{fill:#fff;font-size:29px;font-family:BebasNeueBold, Bebas Neue;}.b{fill:none;stroke:#fff;stroke-width:2px;}</style></defs><text class="a" transform="translate(1377 603) rotate(90)"><tspan x="0" y="0">RANDOM WORD</tspan></text><path class="b" d="M1013.9,449.5V392.6h375.4V600.4"/><path class="b" d="M1389.2,735.7v19.7H1014V737.1"/></svg>
+<svg id="Group_284" data-name="Group 284" xmlns="http://www.w3.org/2000/svg" viewBox="1012.9 391.6 390.1 364.8">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #fff;
+        font-size: 29px;
+        font-family: BebasNeueBold, Bebas Neue;
+      }
+
+      .cls-2 {
+        fill: none;
+        stroke: #fff;
+        stroke-width: 2px;
+      }
+    </style>
+  </defs>
+  <text id="_21_-_24_SEPTEMBER" data-name="21 - 24 SEPTEMBER" class="cls-1" transform="translate(1377 556) rotate(90)"><tspan x="0" y="0">21 - 24 SEPTEMBER</tspan></text>
+  <path id="Path_305" data-name="Path 305" class="cls-2" d="M1013.9,449.5V392.6h375.4L1389,545"/>
+  <path id="Path_306" data-name="Path 306" class="cls-2" d="M1389.2,735.7v19.7H1014V737.1"/>
+</svg>

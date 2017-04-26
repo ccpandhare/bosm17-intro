@@ -2,13 +2,25 @@ html, body {
 	height: 100%;
 	width: 100%;
 }
+@font-face {
+	font-family: Bebas;
+	src: url(Bebas.TTF);
+}
+@font-face {
+	font-family: Roboto;
+	src: url(Roboto.ttf);
+}
+* {
+	font-family: Bebas;
+}
 body{
 	background: url(../resources/01.jpg) no-repeat center;
+	//background: #ddd;
 	background-size: cover;
-	font-family: "Bebas Neue", Arial;
+	font-family: "Bebas", Arial;
 	overflow: hidden;
 }
-ul{
+body > ul {
 	color: white;
 	list-style-type: none;
 	display: flex;
@@ -19,10 +31,64 @@ ul{
 	top:1%;
 	z-index: 2;
 }
-li{
+ul.cards-list {
+	list-style-type: none;
+	display: flex;
+	z-index: 2;
+	/*scroll-snap-points-x: repeat(15%);
+scroll-snap-type: mandatory;
+scroll-snap-destination: 20% 0%;*/
+}
+body > ul >li{
 	white-space: nowrap;
 	cursor: pointer;
 	padding: 2%;
+}
+ul.cards-list li {
+	display: flex;
+	flex-direction: column;
+	padding: 0;
+	/*box-shadow: 0 0 5px #999;*/
+}
+ul.cards-list li > * {
+	flex: 1;
+	width: 100%;
+}
+ul.cards-list li .proPic {
+	background-position: center;
+	background-size: cover;
+}
+ul.cards-list li .info {
+	max-height: 75px;
+	background: #fff;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	padding: 5px;
+	box-sizing: border-box;
+	color: rgb(152,155,157);
+	font-family: Roboto;
+}
+ul.cards-list li .info > a {
+	text-decoration: underline;
+	color: rgb(152,155,157);
+	cursor: pointer;
+}
+ul.cards-list li .info * {
+	font-family: Roboto;
+	line-height: 1;
+}
+label[for="name"] {
+	font-size: 22px;
+	margin: 2px;
+}
+label[for="dept"] {
+	font-size: 20px;
+}
+label[for="mail"] {
+	font-size: 17px;
+	cursor: pointer;
 }
 .popup-wrapper{
 	height: 100vh;
@@ -74,8 +140,7 @@ li{
 	height: 100%;
 	width: 100%;
 	z-index: 2;
-	background-color: #fff;
-	opacity: 0.82;
+	background-color: rgba(255,255,255,0.82);
 }
 .popup .ribbon{
 	display: flex;
@@ -99,7 +164,7 @@ li{
 .ribbon p{
 	white-space: nowrap;
 	transform: skewX(30deg);
-	font-size: 140%;
+	font-size: 27px;
 	font-weight: bold;
 	color: white;
 }
@@ -111,22 +176,31 @@ li{
 }
 .down-ribbon{
 	position: absolute;
-	right: 0;
+	right: calc(0.14 * 35vh - 0.57 * 0.13 * 35vh);
 	bottom: -1px;
 	z-index: 3 !important;
 }
-.content p{
-	padding: 2%;
+.content > div {
+	height: 65%;
+	overflow: scroll;
+	transform: skewX(8deg);
 	margin-left: 10%;
 	margin-right: 10%;
+}
+.content p{
 	text-align: justify;
-	transform: skewX(8deg);
+	font-family: Roboto;
+	font-size: 20px;
+	overflow: scroll;
+}
+.content p * {
+	font-family: Roboto;
 }
 .triangle{
-	width: 0;
-	height: 0;
-	border: 20px solid transparent;
-	border-bottom:20px solid #298976 ;
+	position: absolute;
+	top: 24vh;
+	left:calc(0.14 * 35vh - 0.268 * 0.13 * 70vh);
+	width: calc(0.31 * 0.13 * 35vh * 1.3 * 1.5);
 }
 .triangle.up{
 	position: relative;
@@ -147,23 +221,26 @@ li{
 	overflow-x: scroll;
 	-webkit-scroll-snap-type: mandatory;
     -webkit-scroll-snap-points-x: repeat(100%);
-	margin-left: 0%;
-	margin-top: 10%;
-	margin-right: 10%;
 	list-style-type: none;
 	height: 65%;
 	transform: skewX(8deg);
+	padding:0;
 }
 .card-list.back p{
 		display: none;
 }
 .cards-list li{
-	min-width: 180px;
-	padding: 10px;
-	margin-left: 20px;
-	margin-bottom: 20px;
+	min-width: calc(0.23 * 70vw) !important;
+	margin-left: calc(0.03 * 70vw);
+	margin-right: calc(0.03 * 70vw);
 	display: inline;
 	background-color: #00fed3;
+}
+.cards-list li:first-of-type{
+	margin-left:0;
+}
+.cards-list li:last-of-type{
+	margin-right:0;
 }
 .red .cards-list li{
 	background-color: #ff0000;

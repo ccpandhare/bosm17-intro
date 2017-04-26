@@ -18,60 +18,146 @@
 	<div class="up-ribbon ribbon"><p>ABOUT US</p></div>
 
 	<div class="content">
-		<p>
-			Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-		</p>
+		<div class="">
+			<p>
+				<b>BOSM</b> is one of the most celebrated sporting fest across the country. It is a blend of coordination, enthusiasm, talent and most importantly, the spirit of sportsmanship.
+			</p>
+			<p> The 31st edition of BOSM, which was organized from 15th September, 2016 to 19th September, 2016, witnessed the most majestic and splendid concept of <b>BOSM Torch</b> and its mascot the <b>Baxter</b>- "the Desert Eagle".The lightening of the BOSM torch and the performance by the band of Birla Balika Vidyapeeth, Pilani marked the beginning of this season of sports.
+			</p>
+			<p> Then started the awaited events which impartially judged the hard work, skills and perseverance of the players. Most of the outdoor events were organized in the newly renovated Gym Grounds of BITS Pilani, whose improved tracks, grounds and courts especially bragged the attention and appreciation of all the players from within and outside the college.
+			</p>
+			<p>The food and accommodation facilities were praised by the outside players and spectators.  Also, BOSM 2016 witnessed the presence of great sportspersons like <b>Babita Kumari Phogat</b>, the 2014 Commonweath Gold medalist wrestler and <b>Sanjeev Rajput</b>, the renowned Arjuna Awardee shooter.
+			</p>
+			<center>
+			<p>So, this year we are back with much more competition, adventure and fun.
+	Do you have the guts to take up the challenge and show your skills to the world?</p>
+	<p>Then pull up your socks as we are coming to judge you to the fullest of your talents and bring out the best in you.</p>
+	<p><b>The game begins NOW!!!</b>
+			</p>
+		</center>
+
+		</div>
 	</div>
 <div class="down-ribbon ribbon"></div>
 </div>
 <div class="popup red contact">
+	<svg class="triangle" height="210" width="500">
+	 <polygon points="200,10 250,190 160,210" style="fill:lime;stroke:purple;stroke-width:1" />
+	</svg>
 	<div class="up-ribbon ribbon"><p>CONTACT US</p></div>
 	<div class="content">
-		<ul class="cards-list">
-				<li></li>
-				<li></li>
-				<li></li>
-				<li></li>
-				<li></li>
-				<li></li>
-				<li></li>
-				<li></li>
-				<li></li>
-				<li></li>
-				<li></li>
-		</ul></div>
+		<ul class="cards-list cossac">
+		</ul>
+	</div>
 <div class="down-ribbon ribbon"></div>
 </div>
 <div class="popup green sponsors">
 	<div class="up-ribbon ribbon"><p>SPONSORS</p></div>
 	<div class="content">
-		<p>
-			Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-		</p>
+		<ul class="cards-list spons">
+		</ul>
 	</div>
 <div class="down-ribbon ribbon"></div>
 </div>
 </div>
+<svg class="triangle" height="210" width="500">
+ <polygon points="200,10 250,190 160,210" style="fill:lime;stroke:purple;stroke-width:1" />
+</svg>
 <script type="text/javascript">
+var cossac = [
+	{
+		name: "Shreshtha",
+		img: "Shreshtha.jpg",
+		dept: "Unknown",
+		email: "Unknown"
+	},
+	{
+		name: "Ashay",
+		img: "Ashay.jpg",
+		dept: "Unknown",
+		email: "Unknown"
+	},
+	{
+		name: "Gautham",
+		img: "Gautham.jpg",
+		dept: "Unknown",
+		email: "Unknown"
+	},
+	{
+		name: "Jayshil",
+		img: "Jayshil.jpg",
+		dept: "DVM",
+		email: "Unknown"
+	},
+	{
+		name: "Pavan",
+		img: "Pavan.jpg",
+		dept: "Unknown",
+		email: "Unknown"
+	},
+	{
+		name: "Siddharth",
+		img: "Siddharth.jpg",
+		dept: "Unknown",
+		email: "Unknown"
+	},
+	{
+		name: "Untitled",
+		img: "Untitled.jpg",
+		dept: "Unknown",
+		email: "Unknown"
+	}
+];
+var spons = [
+	{
+		logo: "",
+		name: "",
+		what: ""
+	}
+];
+for (var i in cossac) {
+	cossacn = cossac[i];
+	cossacul = $('ul.cards-list.cossac');
+	cossacul.append('\
+		<li>\
+			<div class="proPic" style="background-image: url(../resources/cossac/'+cossacn.img+')"></div>\
+			<div class="info">\
+				<label for="name">'+cossacn.name+'</label>\
+				<label for="dept">'+cossacn.dept+'</label>\
+				<a href="mailto:'+cossacn.email+'"><label for="mail">'+cossacn.email+'</label></a>\
+			</div>\
+		</li>\
+	');
+}
+for (var i in spons) {
+	sponsul = $('ul.cards-list.spons');
+	sponsul.append('\
+		<li>\
+			<div class="proPic" style="background-image: url(../resources/cossac/'+cossacn.img+')"></div>\
+			<div class="info">\
+				<label for="name">'+cossacn.name+'</label>\
+			</div>\
+		</li>\
+	');
+}
 	$(document).ready(function(){
 			$('.popup').hide();
 			$('.about-link').click(function(){
-				$('.popup').hide();
-				$('.about').show();
-				$('.animation').removeClass('animation');
-				$('.about').addClass('animation');
+				$('.popup').fadeOut('fast',function(){
+					setTimeout(function(){$('.about').fadeIn()},500);
+				});
+				// $('.animation').removeClass('animation');
+				// $('.about').addClass('animation');
 			});
 			$('.contact-link').click(function(){
-				$('.popup').hide();
-				$('.contact').show();
-				$('.animation').removeClass('animation');
-				$('.contact').addClass('animation');
+				$('.popup').fadeOut('fast',function(){
+					setTimeout(function(){$('.contact').fadeIn()},500);
+				});
 			});
 			$('.sponsors-link').click(function(){
-				$('.popup').hide();
-				$('.sponsors').show();
-				$('.animation').removeClass('animation');
-				$('.sponsors').addClass('animation');
+				$('.popup').fadeOut('fast',function(){
+					setTimeout(function(){$('.sponsors').fadeIn()},500);
+				});
 			});
 		});
 </script>
