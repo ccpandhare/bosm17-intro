@@ -46,7 +46,10 @@
 
 window.onload = function(){
 
-	setTimeout(function(){document.getElementById('loader').style.display = "none";
+	setTimeout(function(){
+
+		$('#loader').fadeOut();
+		$('#loader').remove();
 
 		$('#two .texts').textillate({
 							 selector: '#two .texts',
