@@ -7,13 +7,22 @@
 		<link rel="stylesheet" href="assets/stylesheet/resets.css">
 
 		<link rel="stylesheet" href="assets/stylesheet/ui.css">
+		<link rel="stylesheet" href="assets/stylesheet/loader.css">
 				<link rel="stylesheet" href="assets/stylesheet/image-trans.css">
-		<script src="http://code.jquery.com/jquery-latest.min.js">	</script>
+		<script src="assets/javascript/anime.js"></script>
+				<script src="http://code.jquery.com/jquery-latest.min.js">	</script>
 	<script type="text/javascript" src="assets/javascript/lettering.js"></script>
 	<script type="text/javascript" src="assets/javascript/textillate.js"></script>
+
 	<link rel="stylesheet" type="text/css" href="assets/stylesheet/animate.css">
+
 	</head>
 	<body>
+		<div id="loader">
+		
+			<h1>BOSM</h1>
+			<p>Loading</p>
+		</div>
 		<div class="layer" id="one">
 		<!--images-->
 			
@@ -162,37 +171,39 @@
 
 		      	// text animations
 
-		      			$('#two .texts').textillate({
-							 selector: '#two .texts',
-							  loop: false,
-							  minDisplayTime: 2000,
-							  initialDelay: 0,
-							  autoStart: true,
-							  inEffects: [],
-							  outEffects: [ 'hinge' ],
-							  in: {
+		     //  			$('#two .texts').textillate({
+							//  selector: '#two .texts',
+							//   loop: false,
+							//   minDisplayTime: 2000,
+							//   initialDelay: 0,
+							//   autoStart: true,
+							//   inEffects: [],
+							//   outEffects: [ 'hinge' ],
+							//   in: {
 							  	
-							    effect: 'fadeInLeftBig',
-							    delayScale: 1.5,
-							    delay: 50,
-							    sync: false,
-							    shuffle: false,
-								reverse: false,
-							    callback: function () {}
-							  },
-							  out: {
-							    effect: 'hinge',
-							    delayScale: 1.5,
-							    delay: 50,
-							    sync: false,
-							    shuffle: false,
-							    reverse: false,
-							    callback: function () {}
-							  },
-							  callback: function () {},
-							  type: 'char'
-							});
+							//     effect: 'fadeInLeftBig',
+							//     delayScale: 1.5,
+							//     delay: 50,
+							//     sync: false,
+							//     shuffle: false,
+							// 	reverse: false,
+							//     callback: function () {}
+							//   },
+							//   out: {
+							//     effect: 'hinge',
+							//     delayScale: 1.5,
+							//     delay: 50,
+							//     sync: false,
+							//     shuffle: false,
+							//     reverse: false,
+							//     callback: function () {}
+							//   },
+							//   callback: function () {},
+							//   type: 'char'
+							// });
 		</script>
+		<script src="assets/javascript/loader.js"></script>
+
 		<script src="assets/javascript/ui.js"></script>
 	</body>
 </html>
