@@ -8,6 +8,16 @@
 
 		<link rel="stylesheet" href="assets/stylesheet/ui.css">
 				<link rel="stylesheet" href="assets/stylesheet/image-trans.css">
+		<style media="screen">
+			@font-face {
+				font-family: Bebas;
+				src: url(resources/Bebas.TTF);
+			}
+			* {
+				font-family: Bebas !important;
+				font-weight: 100;
+			}
+		</style>
 		<script src="http://code.jquery.com/jquery-latest.min.js">	</script>
 	<script type="text/javascript" src="assets/javascript/lettering.js"></script>
 	<script type="text/javascript" src="assets/javascript/textillate.js"></script>
@@ -15,30 +25,27 @@
 	</head>
 	<body>
 		<div class="layer" id="one">
-		<!--images-->
-			
-			<!-- <base href="https://s3-us-west-2.amazonaws.com/s.cdpn.io/4273/"> -->
 			<div id="slider">
 			<figure>
-			<div class="img" style="background-image: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/4273/ibiza.jpg);"></div>
-			<div class="img" style="background-image: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/4273/ankor-wat.jpg);"></div>
-			<div class="img" style="background-image: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/4273/austin-fireworks.jpg);"></div>
-			<div class="img" style="background-image: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/4273/ibiza.jpg);"></div>
+				<div class="img" style="background-image: url(resources/01.jpg);"></div>
+				<div class="img" style="background-image: url(resources/02.jpg);"></div>
+				<div class="img" style="background-image: url(resources/03.jpg);"></div>
+				<div class="img" style="background-image: url(resources/01.jpg);"></div>
 			</figure>
 			</div>
 			<div class="clr">
 			<div>
-			<div class="red" style="background-color: red;opacity: 0.2;height: 100vh;"></div>
-			<div class="blue" style="background-color: blue;opacity: 0.2;height: 100vh;"></div>
-			<div class="green" style="background-color: green;opacity: 0.2;height: 100vh;"></div>
-			<div class="red" style="background-color: red;opacity: 0.2;height: 100vh;"></div>
+			<div class="red" style="background-color: #EF3340;opacity: 0.56;height: 100vh;"></div>
+			<div class="blue" style="background-color: #00FED3;opacity: 0.56;height: 100vh;"></div>
+			<div class="green" style="background-color: #D68FD6;opacity: 0.56;height: 100vh;"></div>
+			<div class="red" style="background-color: #EF3340;opacity: 0.56;height: 100vh;"></div>
 			</div>
 			</div>
 		</div>
 
-		
+
 		<!-- <div class="layer" id="three">
-			
+
 			<aside></aside>
 		</div> -->
 
@@ -56,7 +63,7 @@
 						<li><a>Sponsors</a></li>
 					</ul>
 				</nav>
-				
+
 			</header>
 			<section>
 				<div class="shade">
@@ -65,7 +72,7 @@
 					<div class="container">
 						<div class="text-container">
 							<div class="text">
-								<ul class="texts"><li data-out-effect="fadeOut" data-out-shuffle="true">GRIT</li><li data-in-effect="fadeIn">GUTS</li><li data-in-effect="fadeIn">GLORY</li>
+								<ul class="texts"><li>GRIT</li><li>GUTS</li><li>GLORY</li>
 								</ul>
 							</div>
 							<span class="bosm-17">
@@ -77,42 +84,45 @@
 				</div>
 			</section>
 			<footer>
-				<div class="button" list="0">
-					<span>
-						<img src="assets/images/play-icon.png">
-					</span>
-				Simon Taufel
-				</div>
-				<div class="button" list="1">
-					<span>
-						<img src="assets/images/play-icon.png">
-					</span>
-				Teaser
+			<div class="footer-inwrap">
+				<div class="buttons">
+					<div class="button" list="0">
+						<span>
+							<img src="assets/images/play-icon.png">
+						</span>
+					Simon Taufel
+					</div>
+					<div class="button" list="1">
+						<span>
+							<img src="assets/images/play-icon.png">
+						</span>
+					Teaser
+					</div>
 				</div>
 				<div class="social_media_icons">
 					<div class="icon">
 						<span>
 							<img src="assets/images/facebook-icon.png">
 						</span>
-					</div><!--
-					--><div class="icon">
+					</div>
+					<div class="icon">
 						<span>
 							<img src="assets/images/youtube-icon.png">
 						</span>
-					</div><!--
-					--><div class="icon">
+					</div>
+					<div class="icon">
 						<span>
 							<img src="assets/images/twitter-icon.png">
 						</span>
 					</div>
-
 				</div>
+			</div>
 			</footer>
 		</div>
-		
-		
 
-	
+
+
+
 		<!-- youtube video -->
 		<div class="backdrop">
 			<div class="youtube-video-container">
@@ -120,8 +130,8 @@
 			</div>
 		</div>
 		<script src="https://www.youtube.com/iframe_api"></script>
-		
-		
+
+
 		<script>
 			//youtube api
 
@@ -164,15 +174,15 @@
 
 		      			$('#two .texts').textillate({
 							 selector: '#two .texts',
-							  loop: false,
+							  loop: true,
 							  minDisplayTime: 2000,
 							  initialDelay: 0,
 							  autoStart: true,
 							  inEffects: [],
 							  outEffects: [ 'hinge' ],
 							  in: {
-							  	
-							    effect: 'fadeInLeftBig',
+
+							    effect: 'fadeIn',
 							    delayScale: 1.5,
 							    delay: 50,
 							    sync: false,
@@ -181,7 +191,7 @@
 							    callback: function () {}
 							  },
 							  out: {
-							    effect: 'hinge',
+							    effect: 'fadeOut',
 							    delayScale: 1.5,
 							    delay: 50,
 							    sync: false,

@@ -16,7 +16,7 @@ Layers
 ***************************/
 .layer {
 	position: absolute;
-	
+
 	top: 0;
 	bottom: 0;
 	width: 100vw;
@@ -30,6 +30,30 @@ Layers
 .layer:last-of-type{
 	z-index : 10;
 
+}
+
+/***************************
+============================
+
+timer's aside
+
+============================
+***************************/
+
+.footer-inwrap {
+	display: flex;
+	flex-direction: column;
+	margin-bottom: 10px;
+}
+
+footer .buttons {
+	display: flex;
+	flex-direction: column;
+	margin: 5px;
+}
+
+footer .buttons > div {
+	margin: 5px;
 }
 
 /***************************
@@ -79,7 +103,7 @@ header
 ***************************/
 
 #two .heading {
-	
+
 	float: right;
 	width: 30vw;
 	height: 100%;
@@ -114,11 +138,10 @@ header
 #two nav li {
 	display: inline-block;
 	height: 100%;
-	font-size: 20px;
+	font-size: 20pt;
 	width: 140px;
 	text-transform: uppercase;
 	margin-left: 40px;
-	
 	cursor: pointer;
 	padding: 10px;
 	text-align: center;
@@ -126,9 +149,14 @@ header
 	transition: all .3s linear;
 }
 
-#two nav li:hover{
-	border-bottom: 1px solid #dfdfdf;
-	color: #dedede;
+#two nav li a {
+	transition: border-bottom-color 0.5s;
+	border-bottom: 3px solid transparent;
+	padding-bottom: 7px;
+}
+
+#two nav li:hover a{
+	border-bottom-color: #fff;
 }
 
 #two nav li:active{
@@ -155,9 +183,8 @@ main content
 #two .shade{
 	height: 80%;
 	width: 110%;
-	
-	transform: rotate(1deg) translateX(-10px);
-	background-color: rgba(0,0,0,.2);
+	transform: rotate(2.5deg) translateX(-10px);
+	background-color: rgba(0,0,0,.15);
 }
 
 #two .main-content{
@@ -166,7 +193,7 @@ main content
 	left:0;
 	right:0;
 	bottom:0;
-	
+
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
@@ -175,13 +202,13 @@ main content
 }
 
 #two .container {
-	
+
 	display: flex;
 	justify-content: center;
 }
 
 #two .text-container {
-	
+
 	padding: 30px;
 }
 
@@ -189,10 +216,9 @@ main content
 	border: 1px solid white;
 	width: 250px;
 	height: auto;
-	margin-left: 6.7em;
+	margin-left: 15.9em;
 	position: absolute;
 	height: 230px;
-
 	animation: frame-moved 1s linear;
 }
 
@@ -204,18 +230,17 @@ main content
 	height: 150px;
 	margin: 0 auto;
 	cursor: pointer;
-
+	margin-bottom: 10px;
 	animation: appear .8s linear;
-
 }
 
 #two .main-content .bosm-17{
 	color: #000;
 	background-color: #fff;
 	width: 130px;
-	
 	font-size: 30px;
 	margin: 0 auto;
+	padding: 0 7px;
 	animation: tranforming-text 0.6s linear;
 }
 
@@ -249,7 +274,7 @@ footer
 	text-align: center;
 	cursor:pointer;
 }
- 
+
 
 
 #two .button:after {
@@ -336,7 +361,7 @@ footer
 
 	============================
 	***************************/
-	
+
 	#two label {
 		display: block;
 		position: relative;
@@ -358,26 +383,26 @@ footer
 		border: 1px solid #ddd;
 	}
 
-	
+
 
 
 	#two nav{
 		max-height:0;
 		overflow: hidden;
-		
+
 		display: block;
 		position: relative;
 
-		
+
 		top: 10px;
 		transition: all 1s linear;
-		
-	}	
+
+	}
 
 	#two header{
 		height: fixed;
 	}
-	
+
 
 	#two nav li{
 		font-size: 16px;
@@ -385,7 +410,7 @@ footer
 		width: 120px;
 		text-align: left;
 		display: block;
-		
+
 		margin-left:10px;
 		position: relative;
 		transform: translateX(-120px);
@@ -407,12 +432,12 @@ footer
 
 	#two nav li:nth-of-type(2){
 		transition: transform .6s ease-in;
-		
+
 	}
 
 	#two nav li:last-of-type{
 		transition: transform .9s ease-in;
-		
+
 	}
 
 	#two header{
@@ -447,7 +472,7 @@ footer
 
 	#two input:checked ~ nav{
 		max-height: 100%;
-		
+
 	}
 
 	#three aside{
@@ -499,14 +524,14 @@ footer
 	#two footer .button{
 		display: block;
 		margin: 2px 10px;
-		
-		
+
+
 	}
 	#two footer .social_media_icons{
 		display: block;
 		clear: both;
 		margin:2px 30px;
-		
+
 		height: auto;
 	}
 
@@ -535,25 +560,25 @@ animation for main content ( Navjot)
 }
 
 @keyframes appear{
-	0%{	
+	0%{
 		opacity: 0;
 		font-size: 0em;
 	}
 	100%{
 		opacity: 1;
-		
+
 		font-size: 5.8em;
 	}
 }
 
 @keyframes appear-phone{
-	0%{	
+	0%{
 		opacity: 0;
 		font-size: 0em;
 	}
 	100%{
 		opacity: 1;
-		
+
 		font-size: 4em;
 	}
 }
