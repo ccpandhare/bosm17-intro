@@ -1,4 +1,5 @@
 # BOSM'17 - Intro Website
+## PLEASE FIX THE ISSUES THAT HAVE BEEN ASSIGNED TO YOU BY TONIGHT (27/4/17)
 
 ## Development Notes
 - Each contributor should make a separate branch.
